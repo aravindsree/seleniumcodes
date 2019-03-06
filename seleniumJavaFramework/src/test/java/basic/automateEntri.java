@@ -1,4 +1,4 @@
-package flipkartlogin;
+package basic;
 
 import java.util.Iterator;
 import java.util.Set;
@@ -11,11 +11,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.FluentWait;
-
 import com.google.common.base.Function;
 
-public class FlipLogin {
-	
+public class automateEntri {
+
 	public static WebDriver driver;
 	public static String driverPath = "C:\\workspace\\tools\\selenium\\";
 	public static String sBookKey = "Selenium";
@@ -65,7 +64,23 @@ public class FlipLogin {
 		//driver.findElement(By.className("_2HNZdt")).click();
 		Thread.sleep(5000);
 		endSession();
-		 
+		/*driver.findElement(By.id(sSearchBox)).sendKeys(sBookKey);
+
+		WebElement searchResult = getElement(By.xpath(sSearchResult));
+		searchResult.click();
+
+		WebDriverWait wait = new WebDriverWait(driver, 30);
+
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(sBookName))).click();
+
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(sAddToCart))).click();
+
+		getElement(By.xpath(sViewCartXPath)).click();
+		getElement(By.cssSelector("form[id='view-cart-form'] button")).click();
+		getElement(By.xpath("//input[@id='email' and @name='email']")).sendKeys("test@testmail.com");
+
+		// pause for a second and close the browser.
+		*/
 	}
 
 	public static WebElement getElement(final By locator) {
@@ -106,5 +121,4 @@ public class FlipLogin {
 		driver.close();
 		driver.quit();
 	}
-
 }
